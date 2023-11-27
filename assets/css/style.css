@@ -1,1 +1,1235 @@
+    :root {
+        --yellow-color: #FFCF24;
+        --red-color: #FF0000;
+        --blue-color: #2B69D5;
+        --green-color: #04BF68;
+        --green-hover-color: #038C4C;
+        --purple-color: #6416BC;
+        --gray-color: #676767;
+        --light-gray-color: #A1A0A0;
+        --light-gray-background-color: #f7f8f9;
+        --white-color: #FFFFFF;
+        --overlay-color: rgba(0, 0, 0, 0.3);
+    }
+    * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    }
+    body {
+    font-family: Roboto, sans-serif;
+    line-height: 1.6;
+    color: #ffffff;
+    font-size: 1.1rem;
+    overflow-x: hidden;
+    }
+    h1,h2,h3,h4 {
+    line-height: 1.3;
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+    font-size: 30px;
+    }
+    h3 {
+    font-size: 24px;
+    }
+    ul {
+    list-style: none;
+    }
+    img {
+    width: 100%;
+    }
+    svg {
+        max-width: 100%;
+        display: block;
+        }
+  .btn {
+      display: inline-block;
+      background: var(--green-color);
+      color: #fff;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      font-size: 1.1rem;
+      border-radius: 5px;
+      text-decoration: none;
+      }
+    .btn:hover {
+    background: var(--green-hover-color);
+    }
+    .play-button-container-spacer{
+    display: flex;
+    justify-content: center;
+    height: 70px;
+    }
+    .play-button-container-spacer-mobile{
+    display: flex;
+    justify-content: center;
+    height: 90px;
+    }
+    .guts-button{
+    font-weight: 500;
+    border: 0;
+    border-radius: 5px;
+    background-color: #04BF68;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 40px;
+    cursor: pointer;
+    text-decoration: none;
+    }
+    .guts-button:hover{
+    background: var(--green-hover-color);
+    }
 
+    /*HEADER*/
+  .header-container{
+    background: url(../../assets/images/navbar/nav-bar-background-2560px.png) center top;
+    background-repeat: no-repeat;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+    height: 116px;
+    background-color: transparent;
+    display: flex;
+    position: relative;
+    z-index: 200;
+  }
+  .header {
+    position: absolute;
+    top: 0;
+    width: fit-content;
+    z-index: 11;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    transition: all ease .3s;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: top;
+    padding: 0;
+    margin: 0;
+  }
+  .img-navbar-mob{
+    display: none;
+    max-height: 65px;
+    width: auto;
+  }
+  .navbar-left {
+    display: flex;
+    justify-content: center;
+    height: 115px;
+  }
+  .navbar-logo{
+    width: 130px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .logo-navbar-left{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+    width: 115px;
+  }
+  .navbar-casino{
+    width: 75px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .casino-navbar-left{
+    overflow: hidden;
+    box-sizing: border-box;
+    display: inline-block;
+    position: relative;
+  }
+  .navbar-live-casino{
+    width: 75px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .navbar-sports{
+    width: 75px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .nav-logo-middle-container{
+    width: 100%;
+  }
+  .nav-logo-middle-wrapper{
+    display: flex;
+    justify-content: center;
+  }
+  #logo-nav-middle{
+    width: 80px;
+  }
+  .navbar-right-container{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 11;
+    -webkit-transition: all ease .3s;
+    -moz-transition: all ease .3s;
+    transition: all ease .3s;
+    border-bottom: 1px solid transparent;
+    display: flex;
+    align-items: top;
+    justify-content: end;
+    padding: 0;
+    margin: 0;
+  }
+  .navbar-right{
+    display: flex;
+    justify-content: end;
+    height: 115px;
+  }
+  .navbar-promotions{
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 14px;
+  }
+  .navbar-login{
+    height: 40px;
+    align-self: top;
+    padding-top: 15px;
+    margin: 0 1vw;
+  }
+  .login-button{
+    display: flex;
+    text-align: center;
+    line-height: 4;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: transparent;
+    border: 1px solid #000000;
+    color: #000000;
+    text-decoration: none;
+    padding: 10px 30px;
+  }
+  .title{
+    display: block;
+    text-align: center;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+  .navbar-create-account{
+    height: 40px;
+    align-self: top;
+    padding-top: 15px;
+    margin: 0 1.5vw;
+  }
+  .create-account-button{
+    display: flex;
+    text-align: center;
+    line-height: 4;
+    font-weight: 700;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    background-color: #04bf68;
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    border: 1px solid #04bf68;
+  }
+  #navbar-img-mobile{
+    display: none;
+  }
+
+  .mainDiv {
+    width: 100%;
+    /* height: 75vw; */
+    color: #ffffff;
+    text-align: center;
+    overflow: hidden;
+    margin-top: -60px;
+  }
+  .overlay-video{
+    display: block;
+    width: 100%;
+  }
+  #video-bg-800{
+    display: none;
+  }
+  #video-bg-475{
+    display: none;
+  }
+  #logo{
+        position: absolute;
+        top: 7vw;
+        left: 0;
+        padding-left: 25vw;
+        width: 100%;
+        display: flex;
+  }
+  #logo .pinata-logo{
+    width: 20vw;
+  }
+  #title{
+    position: absolute;
+    top: 15vw;
+    left: 0;
+    padding-left: 16.5vw;
+    width: 100%;
+    display: flex;
+    
+  }
+  .mainDiv h1 {
+    font-size: 3.5vw;
+    line-height: 4vw;
+    font-weight: 900;
+  }
+  #subtitle{
+    position: absolute;
+    top: 25vw;
+    padding-left: 21.5vw;
+    width: 100%;
+    display: flex;
+  }
+  #subtitle h3{
+    font-size: 2vw;
+    line-height: 2.3vw;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+  #subtitle .orange{
+    color: #ff8f0e;
+  }
+  #description{
+    position: absolute;
+    top: 26vw;
+    padding-left: 22vw;
+    width: 100%;
+    display: flex;
+  }
+  #description p {
+    font-size: 1vw;
+    font-weight: 500;
+    text-align: center;
+  }
+  #description{
+    display: none;
+  }
+
+  .desktop-18 {
+    display: block;
+  }
+  .mobile-18{
+    display: none;
+  }
+
+  .play-button-container{
+    position: absolute;
+    font-size: 1.5vw;
+    top: 32vw;
+    padding-left: 30vw;
+    text-decoration: none;
+    z-index: 100;
+    display: flex;
+    width: 100%;
+  }
+  .how-it-works-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40vw;
+    flex-direction: column;
+  }
+  .how-it-works-container h3{
+    font-size: 1.7vw;
+    line-height: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+
+  .steps-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 43vw;
+    flex-direction: column;
+  }
+
+  .step-single-container-01{
+    background: url(../images/steps/step-01-bg.png);
+    background-size: cover;
+    background-position: center center;
+    width: 42vw;
+    height: 13vw;
+  }
+  .step-single-container-01 h3{
+    font-size: 1.5vw;
+    line-height: 2vw;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-left: 15vw;
+    padding-top: 3.5vw;
+    text-align: left;
+  }
+  .step-single-container-01 ul{
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    padding-left: 15vw;
+    padding-right: 0;
+    padding-top: 1vw;
+    font-size: 1vw;
+    text-align: left;
+  }
+  .step-single-container-02{
+    background: url(../images/steps/step-02-bg.png);
+    background-size: cover;
+    background-position: center center;
+    width: 42vw;
+    height: 13vw;
+  }
+  .step-single-container-02 h3{
+    font-size: 1.5vw;
+    line-height: 2vw;
+    font-weight: 600;
+    text-transform: capitalize;
+    padding-left: 6vw;
+    padding-top: 3.5vw;
+    text-align: left;
+  }
+  .step-single-container-02 ul{
+    list-style-type: disc;
+    display: flex;
+    flex-direction: column;
+    padding-left: 6vw;
+    padding-right: 15vw;
+    padding-top: 1vw;
+    font-size: 1vw;
+    text-align: left;
+  }
+  .dont-miss-the-fun-container{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 72vw;
+    flex-direction: column;
+  }
+  .dont-miss-the-fun-container h3{
+    font-size: 1.7vw;
+    line-height: 2vw;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #ff8f0e;
+  }
+
+.test-section{
+  height: 200px;
+  background-color: #000000;
+  display: none;
+}
+.confetti-mob-container-600, .confetti-mob-container-475, .confetti-desktop-container-2560, .confetti-desktop-container-1920{
+  display: none;
+}
+
+  /* MEDIA QUERIES */
+
+  /*MAX WIDTH 2560PX*/
+  @media (max-width:2560px){
+    
+    .video-background{
+      position: absolute;
+      z-index: 0;
+      top: 60px;
+      margin: auto;
+      width: 100%;
+      height: 1080px;
+      overflow: hidden;
+      clip-path: 0 0;
+      transform: translateZ(0);
+    }
+
+    /* OVERLAY VIDEO STYLE UPDATE */
+    .overlay-video{
+      transform: translatez(0);
+      position: absolute;
+      left: -100%;
+      right: -100%;
+      margin: auto;
+      min-width: 2560px;
+      overflow: hidden;
+    }
+
+    .mainDiv{
+      background-color: #4e69ad;
+    }
+
+    .content-container{
+      z-index: 10;
+    }
+    #logo{
+      position: relative;
+      top: 0;
+      padding: 0 0 0px 0;
+      margin: 120px 0 0px -15vw;
+      justify-content: center;
+    }
+    #logo .pinata-logo{
+      width: 450px;
+    }
+    #subtitle{
+      position: relative;
+      top: 0;
+      padding: 0 0 0 0;
+      margin: 40px 0 0 -15vw;
+      justify-content: center;
+    }
+    #subtitle h3{
+      font-size: 48px;
+      line-height: 52px;
+    }
+    .play-button-container{
+      position: relative;
+      top: 0;
+      padding: 0 0 0 0;
+      margin: 50px 0 0 -15vw;
+      justify-content: center;
+      font-size: 1rem;
+    }
+
+
+    .how-it-works-container{
+      position: relative;
+      top: 0;
+      margin: 300px 0 0 0;
+    }
+    .how-it-works-container h3{
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .steps-container{
+      position: relative;
+      top: 0;
+      margin: 0 auto;
+      padding: 50px 0;
+    }
+    .step-single-container-01{
+      margin: 0 auto;
+      width: 900px;
+      height: 290px;
+    }
+    .step-single-container-01 h3{
+      font-size: 30px;
+      line-height: 34px;
+      padding-left: 320px;
+      padding-top: 85px;
+    }
+    .step-single-container-01 ul{
+      font-size: 24px;
+      line-height: 32px;
+      padding: 20px 0px 0 320px;
+    }
+    .step-single-container-02{
+      margin: 0 auto;
+      width: 900px;
+      height: 290px;
+    }
+    .step-single-container-02 h3{
+      font-size: 30px;
+      line-height: 34px;
+      padding-left: 120px;
+      padding-top: 85px;
+    }
+    .step-single-container-02 ul{
+      font-size: 24px;
+      line-height: 32px;
+      padding: 20px 0px 0 120px;
+    }
+    .dont-miss-the-fun-container{
+      position: relative;
+      top: 0;
+      padding: 0 0 100px 0;
+      margin-top: -1px;
+      background-color: #4e69ad;
+    }
+    .dont-miss-the-fun-container h3{
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .confetti-desktop-container-2560{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-2560x1900px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+    }
+    .confetti-img-2560{
+      min-height: 1880px;
+      min-width: 100%;
+      opacity: 0;
+    }
+  }
+
+  
+
+  @media (max-width:1920px){
+    .mainDiv{
+      /* height: 1400px; */
+      background-color: #4a7eba;
+    }
+
+    .confetti-desktop-container-2560{
+      display: none;
+    }
+    
+    .overlay-video{
+      min-width: 1920px;
+    }
+    .video-background{
+      z-index: 0;
+    }
+
+    .content-container{
+      z-index: 10;
+    }
+    #logo{
+      position: relative;
+      top: 0;
+      padding: 0 0 0px 0;
+      margin: 40px 0 0px -15vw;
+      justify-content: center;
+    }
+    #logo .pinata-logo{
+      width: 380px;
+    }
+    #subtitle{
+      position: relative;
+      top: 0;
+      padding: 0 0 0 0;
+      margin: 20px 0 0 -15vw;
+      justify-content: center;
+    }
+    #subtitle h3{
+      font-size: 40px;
+      line-height: 44px;
+    }
+    .play-button-container{
+      position: relative;
+      top: 0;
+      padding: 0 0 0 0;
+      margin: 40px 0 0 -15vw;
+      justify-content: center;
+      font-size: 1rem;
+    }
+    .how-it-works-container{
+      position: relative;
+      top: 0;
+      margin: 200px 0 0 0;
+    }
+    .how-it-works-container h3{
+      font-size: 32px;
+      line-height: 36px;
+    }
+    .steps-container{
+      position: relative;
+      top: 0;
+      margin: 20px auto;
+      background-color: transparent;
+    }
+    .step-single-container-01{
+      margin: 0 auto;
+      width: 806px;
+      height: 250px;
+    }
+    .step-single-container-01 h3{
+      font-size: 26px;
+      line-height: 30px;
+      padding-left: 290px;
+      padding-top: 70px;
+    }
+    .step-single-container-01 ul{
+      font-size: 20px;
+      line-height: 26px;
+      padding: 20px 0px 0 290px;
+    }
+    .step-single-container-02{
+      margin: 0 auto;
+      width: 806px;
+      height: 250px;
+    }
+    .step-single-container-02 h3{
+      font-size: 26px;
+      line-height: 30px;
+      padding-left: 120px;
+      padding-top: 70px;
+    }
+    .step-single-container-02 ul{
+      font-size: 20px;
+      line-height: 26px;
+      padding: 20px 0px 0 120px;
+    }
+    .dont-miss-the-fun-container{
+      position: relative;
+      top: 0;
+      padding: 0 0 50px 0;
+      background-color: transparent;
+    }
+    .dont-miss-the-fun-container h3{
+      font-size: 32px;
+      line-height: 34px;
+    }
+    .confetti-desktop-container-2560{
+      display: none;
+    }
+    .confetti-desktop-container-1920{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-1920x1550px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+    }
+    .confetti-img-1920{
+      min-height: 1450px;
+      min-width: 100%;
+      opacity: 0;
+    }
+  }
+
+
+/* MAX WIDTH 1600PX */
+
+
+  @media (max-width:1600px){
+    
+    .overlay-video{
+      min-width: 1600px;
+    }
+    #logo .pinata-logo{
+      width: 320px;
+    }
+    #subtitle h3{
+      font-size: 34px;
+      line-height: 40px;
+    }
+    .how-it-works-container{
+      margin: 150px 0 0 0;
+    }
+    .confetti-img-1920{
+      min-height: 1395px;
+    }
+
+  }
+
+
+  /*MAX WIDTH 1300PX */
+
+  @media (max-width:1300px){
+    /*NAV BAR*/
+    .header-container{
+      background: url(../../assets/images/navbar/nav-bar-background-1920px.jpg) center top;
+      background-repeat: no-repeat;
+      filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.3));
+      height: 60px;
+      background-color: transparent;
+      display: flex;
+      z-index: 200;
+    }
+    .nav-logo-middle-wrapper{
+      display: none;
+    }
+
+    /*CONTENT*/
+    .mainDiv{
+      
+      margin-top: 0;
+      width: 100%;
+      height: auto;
+    }
+    
+    .overlay-video{
+      min-width: 1300px;
+    }
+
+    .content-container{
+      z-index: 10;
+    }
+    #logo{
+      position: relative;
+      top: 0;
+      padding: 0 300px 0 0;
+      margin: 40px 0 0 0;
+      justify-content: center;
+
+    }
+    #logo .pinata-logo{
+      width: 225px;
+    }
+    #subtitle{
+      position: relative;
+      top: 0;
+      padding: 0 300px 0 0;
+      margin: 20px 0 0 0;
+      justify-content: center;
+    }
+    #subtitle h3{
+      font-size: 24px;
+      line-height: 28px;
+    }
+    .play-button-container{
+      position: relative;
+      font-size: 16px;
+      top: 0;
+      padding: 0 300px 0 0;
+      margin: 20px 0 0 0;
+      justify-content: center;
+    }
+    .guts-button{
+      padding: 10px 20px;
+    }
+    .how-it-works-container{
+      position: relative;
+      top: 0;
+      margin: 90px 0 0 0;
+    }
+    .how-it-works-container h3{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .steps-container{
+      position: relative;
+      top: 0;
+      margin: 20px auto;
+      padding: 0;
+    }
+    .step-single-container-01{
+      width: 550px;
+      height: 250px;
+      margin: 0 auto;
+      background: url(../images/steps/step-01-bg-1200px.png);
+      background-size: cover;
+    }
+    .step-single-container-01 h3{
+      font-size: 18px;
+      line-height: 22px;
+      padding-top: 75px;
+      padding-left: 210px;
+    }
+    .step-single-container-01 ul{
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 210px;
+      padding-top: 15px;
+      padding-right: 40px;
+    }
+    .step-single-container-02{
+      width: 550px;
+      height: 250px;
+      margin: 0 auto;
+      background: url(../images/steps/step-02-bg-1200px.png);
+      background-size: cover;
+    }
+    .step-single-container-02 h3{
+      font-size: 18px;
+      line-height: 22px;
+      padding-top: 65px;
+      padding-left: 70px;
+    }
+    .step-single-container-02 ul{
+      font-size: 16px;
+      line-height: 20px;
+      padding-left: 70px;
+      padding-top: 15px;
+      padding-right: 200px;
+    }
+    .dont-miss-the-fun-container{
+      position: relative;
+      top: 0;
+      padding: 0 0 50px 0;
+    }
+    .dont-miss-the-fun-container h3{
+      font-size: 20px;
+      line-height: 24px;
+    }
+    .confetti-desktop-container-1920{
+      background-size: 1400px;
+    }
+    .confetti-img-1920{
+      min-height: 1050px;
+    }
+
+  }
+  
+/*MAX WIDTH 900PX */
+  @media (max-width:900px){
+    .navbar-promotions, .navbar-sports, .navbar-live-casino, .navbar-casino{
+      display: none;
+    }
+    .navbar-logo{
+      padding-left: 20px;
+    }
+    .overlay-video{
+      min-width: 1000px;
+    }
+    .steps-container{
+      padding: 0;
+    }
+    .how-it-works-container{
+      margin-top: 50px;
+    }
+    .video-background{
+      height: 600px;
+    }
+    .confetti-desktop-container-1920{
+      background-size: 1080px;
+    }
+    .confetti-img-1920{
+      min-height: 1050px;
+    }
+  }
+
+
+
+/*MAX WIDTH 600PX */
+
+  @media (max-width:600px){
+
+    .mainDiv{
+      background: linear-gradient(#3a1168, #5985c1);
+    }
+
+    .video-background-new{
+      position: absolute;
+      z-index: -10;
+      top: 896px;
+      margin: auto;
+      width: 100%;
+      height: 400px;
+      overflow: hidden;
+      clip-path: 0 0;
+      transform: translateZ(0);
+    }
+
+    #video-bg-800{
+      display: block;
+    }
+
+    .overlay-video{
+      min-width: 600px;
+    }
+    .video-background{
+      z-index: 0;
+    }
+
+
+
+    #video-bg-1920{
+      display: none;
+    }
+    #logo{
+      position: relative;
+      top: 0;
+      left: 0;
+      padding: 0;
+      transform: translateX(0px);
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    #logo .pinata-logo{
+      width: 200px;
+    }
+    #subtitle{
+      position: relative;
+      top: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      padding-top: 10px;
+    }
+    #subtitle h3{
+      font-size: 30px;
+      line-height: 34px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    #description{
+      position: relative;
+      top: 0;
+      padding-left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    #description p{
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 18px;
+      text-align: center;
+    }
+    #description{
+      display: none;
+    }
+    .play-button-container{
+      position: relative;
+      font-size: 1rem;
+      top: 0;
+      padding: 0;
+      text-decoration: none;
+      z-index: 1;
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    .guts-button{
+      padding: 5px 20px;
+    }
+    .how-it-works-container{
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 25px;
+    }
+    .how-it-works-container h3{
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+    }
+    .steps-container{
+      position: relative;
+      top: 0;
+      left: 0;
+      transform: translateX(0);
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 25px;
+    }
+    .step-single-container-01{
+      background: url(../images/steps/step-01-bg-600px-breakpoint.png);
+      background-size: cover;
+      background-position: center center;
+      width: 450px;
+      height: 170px;
+    }
+    .step-single-container-01 h3{
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-left: 100px;
+      padding-top: 35px;
+      text-align: left;
+    }
+    .step-single-container-01 ul{
+      list-style-type: disc;
+      display: flex;
+      flex-direction: column;
+      padding-left: 100px;
+      padding-right: 20px;
+      padding-top: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+    .step-single-container-02{
+      background: url(../images/steps/step-02-bg-600px-breakpoint.png);
+      background-size: cover;
+      background-position: center center;
+      width: 450px;
+      height: 170px;
+    }
+    .step-single-container-02 h3{
+      font-size: 18px;
+      line-height: 20px;
+      font-weight: 600;
+      text-transform: capitalize;
+      padding-left: 70px;
+      padding-top: 45px;
+      text-align: left;
+    }
+    .step-single-container-02 ul{
+      list-style-type: disc;
+      display: flex;
+      flex-direction: column;
+      padding-left: 70px;
+      padding-right: 80px;
+      padding-top: 10px;
+      font-size: 16px;
+      text-align: left;
+    }
+    .dont-miss-the-fun-container{
+      position: relative;
+      left: 0;
+      top: 0;
+      transform: translateX(0);
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 0 0 20px 0;
+    }
+    .dont-miss-the-fun-container h3{
+      font-size: 20px;
+      line-height: 24px;
+      font-weight: 600;
+      text-transform: uppercase;
+      color: #ff8f0e;
+    }
+    .confetti-mob-container-600{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-600x1200px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+    }
+    .confetti-img-600{
+      min-height: 1200px;
+      min-width: 100%;
+      opacity: 0;
+    }
+    .confetti-img-475{
+      display: none;
+    }
+    .confetti-mob-container .content-container{
+      position: relative;
+    }
+  }
+
+  @media (max-width:475px){
+
+    /* NAV BAR */
+    .navbar-left{
+      height: 60px;
+    }
+    .navbar-right{
+      height: 60px;
+    }
+    .navbar-login{
+      padding-top: 10px;
+    }
+    .login-button{
+      padding: 10px;
+    }
+    .navbar-create-account{
+      padding-top: 10px;
+    }
+    .create-account-button{
+      padding: 10px;
+    }
+
+    /*CONTENT*/
+    
+    #video-bg-475{
+      display: none;
+    }
+    .video-background-new{
+      top: 1058px;
+      height: 317px;
+    }
+    .overlay-video{
+      min-width: 475px;
+     
+    }
+    .confetti-mob-container-600{
+      display: none;
+    }
+    .confetti-mob-container-475{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-475x1200px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+    }
+    .confetti-img-475{
+      display: block;
+      min-height: 1200px;
+      min-width: 100%;
+      opacity: 0;
+    }
+    #subtitle{
+      padding: 0 50px;
+    }
+    .play-button-container{
+      margin-top: 30px;
+    }
+    .how-it-works-container{
+      margin-top: 30px;
+    }
+    .steps-container{
+      margin-top: 40px;
+    }
+    .step-single-container-01{
+      width: 350px;
+      height: 200px;
+      background: url(../images/steps/step-01-bg-475px.png);
+      background-size: cover;
+      background-position: center center;
+    }
+    .step-single-container-01 h3{
+      padding-top: 45px;
+    }
+    .step-single-container-01 ul{
+      padding-right: 30px;
+    }
+    .step-single-container-02{
+      width: 350px;
+      height: 200px;
+      background: url(../images/steps/step-02-bg-475px.png);
+      background-size: cover;
+      background-position: center center;
+    }
+    .step-single-container-02 h3{
+      padding-left: 60px;
+      padding-top: 40px;
+    }
+    .step-single-container-02 ul{
+      padding-left: 60px;
+      padding-right: 60px;
+    }
+    .dont-miss-the-fun-container{
+      margin-top: 20px;
+      margin-bottom: 30px;
+      padding: 0 70px;
+    }
+  }
