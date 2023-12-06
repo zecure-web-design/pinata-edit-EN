@@ -445,9 +445,17 @@
   background-color: #000000;
   display: none;
 }
-.confetti-mob-container-600, .confetti-mob-container-475, .confetti-desktop-container-2560, .confetti-desktop-container-1920{
+.confetti-mob-container-600, .confetti-mob-container-475, .confetti-desktop-container-2560, .confetti-desktop-container-1920, .confetti-desktop-container-1600, .confetti-desktop-container-1300, .coins-desktop-container-1300{
   display: none;
 }
+
+.coins-desktop-container-2560, .coins-desktop-container-1920, .coins-desktop-container-1600{
+  display: none;
+}
+.pinata-background-coming, .pinata-background-going, .pinata-background-coming-1300, .pinata-background-going-1300, .pinata-background-coming-600, .pinata-background-going-600{
+  display: none;
+}
+
 
   /* MEDIA QUERIES */
 
@@ -461,6 +469,9 @@
   .mainDiv{
     max-width: 2560px;
     margin: 0 auto;
+    background: linear-gradient(#3a1168, #5985c1);
+    margin-top: -60px;
+    
   }
   .video-background{
     max-width: 2560px;
@@ -492,9 +503,6 @@
     margin: auto;
     min-width: 2560px;
     overflow: hidden;
-  }
-  .mainDiv{
-    background-color: #4e69ad;
   }
   .content-container{
     z-index: 10;
@@ -533,7 +541,7 @@
   .how-it-works-container{
     position: relative;
     top: 0;
-    margin: 300px 0 0 0;
+    margin: 100px 0 0 0;
   }
   .how-it-works-container h3{
     font-size: 40px;
@@ -582,7 +590,7 @@
     top: 0;
     padding: 0 0 100px 0;
     margin-top: -1px;
-    background-color: #4e69ad;
+    /* background-color: #4e69ad; */
   }
   .dont-miss-the-fun-container h3{
     font-size: 40px;
@@ -590,21 +598,73 @@
   }
   .confetti-desktop-container-2560{
     display: block;
-    width: 100vw;
+    width: 2560px;
     position: absolute;
-    background-image: url('../images/banner/confetti-2560x1900px-tinyfied.png');
+    background-image: url('../images/banner/confetti-2560x1700px-tinyfied.png');
     background-position: top center;
     background-repeat: no-repeat;
     overflow: hidden;
     top: 50px;
     z-index: 1;
+    max-height: 1700px;
   }
   .confetti-img-2560{
-    min-height: 1880px;
+    min-height: 1700px;
     min-width: 100%;
     opacity: 0;
   }
 
+  .coins-desktop-container-2560{
+    display: block;
+    width: 2560px;
+    position: absolute;
+    background-image: url('../images/banner/coins-2560x1700px-tinyfied.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    top: 50px;
+    z-index: 1;
+    max-height: 1700px;
+  }
+  .coins-img-2560{
+    min-height: 1700px;
+    min-width: 100%;
+    opacity: 0;
+  }
+
+  .pinata-background-coming{
+    display: block;
+    width: 2560px;
+    position: absolute;
+    background-image: url('../images/banner/pinata-closed-1920x1080px-tinyfied.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    top: 50px;
+    z-index: 0;
+  }
+  .pinata-background-coming .pinata-background-img{
+    min-width: 2560px;
+    min-height: 100%;
+    opacity: 0;
+  }
+
+  .pinata-background-going{
+    display: block;
+    width: 2560px;
+    position: absolute;
+    background-image: url('../images/banner/pinata-open-1920x1080px-tinyfied.png');
+    background-position: top center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    top: 50px;
+    z-index: 0;
+  }
+  .pinata-background-going .pinata-background-img{
+    min-width: 2560px;
+    min-height: 100%;
+    opacity: 0;
+  }
 }
 
 
@@ -634,7 +694,7 @@
     }
 
     .mainDiv{
-      background-color: #4e69ad;
+      background: linear-gradient(#3a1168, #5985c1);
     }
 
     .content-container{
@@ -674,7 +734,7 @@
     .how-it-works-container{
       position: relative;
       top: 0;
-      margin: 300px 0 0 0;
+      margin: 100px 0 0 0;
     }
     .how-it-works-container h3{
       font-size: 40px;
@@ -723,7 +783,7 @@
       top: 0;
       padding: 0 0 100px 0;
       margin-top: -1px;
-      background-color: #4e69ad;
+      /* background-color: #4e69ad; */
     }
     .dont-miss-the-fun-container h3{
       font-size: 40px;
@@ -733,16 +793,69 @@
       display: block;
       width: 100vw;
       position: absolute;
-      background-image: url('../images/banner/confetti-2560x1900px-tinyfied.png');
+      background-image: url('../images/banner/confetti-2560x1700px-tinyfied.png');
       background-position: top center;
       background-repeat: no-repeat;
       overflow: hidden;
       top: 50px;
       z-index: 1;
+      max-height: 1700px;
     }
     .confetti-img-2560{
-      min-height: 1880px;
+      min-height: 1700px;
       min-width: 100%;
+      opacity: 0;
+    }
+    .coins-desktop-container-2560{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/coins-2560x1700px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1700px;
+    }
+    .coins-img-2560{
+      min-height: 1700px;
+      min-width: 100%;
+      opacity: 0;
+    }
+
+
+    .pinata-background-coming{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-closed-1920x1080px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 0;
+    }
+    .pinata-background-coming .pinata-background-img{
+      min-width: 2560px;
+      min-height: 100%;
+      opacity: 0;
+    }
+
+    .pinata-background-going{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-open-1920x1080px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 0;
+    }
+    .pinata-background-going .pinata-background-img{
+      min-width: 2560px;
+      min-height: 100%;
       opacity: 0;
     }
   }
@@ -858,22 +971,52 @@
     .confetti-desktop-container-2560{
       display: none;
     }
+    .coins-desktop-container-2560{
+      display: none;
+    }
     .confetti-desktop-container-1920{
       display: block;
       width: 100vw;
       position: absolute;
-      background-image: url('../images/banner/confetti-1920x1550px-tinyfied.png');
+      background-image: url('../images/banner/confetti-1920x1510px-tinyfied.png');
       background-position: top center;
       background-repeat: no-repeat;
       overflow: hidden;
       top: 50px;
       z-index: 1;
+      max-height: 1510px;
     }
     .confetti-img-1920{
-      min-height: 1450px;
+      min-height: 1510px;
       min-width: 100%;
       opacity: 0;
     }
+
+    .coins-desktop-container-1920{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/coins-1920x1510px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1510px;
+    }
+    .coins-img-1920{
+      min-height: 1510px;
+      min-width: 100%;
+      opacity: 0;
+    }
+    .pinata-background-coming .pinata-background-img{
+      min-width: 1920px;
+    }
+    .pinata-background-going .pinata-background-img{
+      min-width: 1920px;
+    }
+
+
   }
 
 
@@ -895,10 +1038,47 @@
     .how-it-works-container{
       margin: 150px 0 0 0;
     }
-    .confetti-img-1920{
-      min-height: 1395px;
+    .confetti-desktop-container-1920, .coins-desktop-container-1920{
+      display: none;
+    }
+    .confetti-desktop-container-1600, .coins-desktop-container-1600{
+      display: block;
+    }
+    .confetti-desktop-container-1600{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-1600x1400px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1400px;
+    }
+    .confetti-img-1600{
+      min-height: 1400px;
+      min-width: 100%;
+      opacity: 0;
     }
 
+    .coins-desktop-container-1600{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/coins-1600x1400px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1400px;
+    }
+    .coins-img-1600{
+      min-height: 1400px;
+      min-width: 100%;
+      opacity: 0;
+    }
   }
 
 
@@ -1031,17 +1211,85 @@
       font-size: 20px;
       line-height: 24px;
     }
-    .confetti-desktop-container-1920{
-      background-size: 1400px;
+    .confetti-desktop-container-1600, .coins-desktop-container-1600{
+      display: none;
     }
-    .confetti-img-1920{
-      min-height: 1050px;
+    .confetti-desktop-container-1300{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/confetti-1300x1100px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1100px;
+    }
+    .confetti-img-1300{
+      min-height: 1100px;
+      min-width: 100%;
+      opacity: 0;
     }
 
+    .coins-desktop-container-1300{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/coins-1300x1100px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 1;
+      max-height: 1100px;
+    }
+    .coins-img-1300{
+      min-height: 1100px;
+      min-width: 100%;
+      opacity: 0;
+    }
+
+    .pinata-background-coming, .pinata-background-going{
+      display: none;
+    }
+    .pinata-background-coming-1300{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-closed-1300x731px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 0;
+    }
+    .pinata-background-coming-1300 .pinata-background-img{
+      min-width: 1300px;
+      min-height: 100%;
+      opacity: 0;
+    }
+
+    .pinata-background-going-1300{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-open-1300x731px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 50px;
+      z-index: 0;
+    }
+    .pinata-background-going-1300 .pinata-background-img{
+      min-width: 1300px;
+      min-height: 100%;
+      opacity: 0;
+    }
   }
   
-/*MAX WIDTH 900PX */
-  @media (max-width:900px){
+/*MAX WIDTH 1024PX */
+  @media (max-width:1024px){
     .navbar-promotions, .navbar-sports, .navbar-live-casino, .navbar-casino{
       display: none;
     }
@@ -1054,9 +1302,9 @@
     .steps-container{
       padding: 0;
     }
-    .how-it-works-container{
+    /* .how-it-works-container{
       margin-top: 50px;
-    }
+    } */
     .video-background{
       height: 600px;
     }
@@ -1076,6 +1324,7 @@
 
     .mainDiv{
       background: linear-gradient(#3a1168, #5985c1);
+      min-height: 1200px;
     }
 
     .video-background-new{
@@ -1259,6 +1508,12 @@
       margin-bottom: 20px;
       padding: 0 0 20px 0;
     }
+    .confetti-desktop-container-1300, .coins-desktop-container-1300{
+      display: none;
+    }
+    .pinata-background-coming-1300, .pinata-background-going-1300{
+      display: none;
+    }
     .dont-miss-the-fun-container h3{
       font-size: 20px;
       line-height: 24px;
@@ -1287,6 +1542,40 @@
     .confetti-mob-container .content-container{
       position: relative;
     }
+
+    .pinata-background-coming-600{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-closed-600x400px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 830px;
+      z-index: 0;
+    }
+    .pinata-background-coming-600 .pinata-background-img{
+      min-width: 600px;
+      min-height: 100%;
+      opacity: 0;
+    }
+
+    .pinata-background-going-600{
+      display: block;
+      width: 100vw;
+      position: absolute;
+      background-image: url('../images/banner/pinata-open-600x400px-tinyfied.png');
+      background-position: top center;
+      background-repeat: no-repeat;
+      overflow: hidden;
+      top: 830px;
+      z-index: 0;
+    }
+    .pinata-background-going-600 .pinata-background-img{
+      min-width: 600px;
+      min-height: 100%;
+      opacity: 0;
+    }
   }
 
   @media (max-width:475px){
@@ -1312,7 +1601,13 @@
     }
 
     /*CONTENT*/
-    
+
+    .mainDiv{
+      min-height: 1370px;
+    }
+    .pinata-background-coming-600, .pinata-background-going-600{
+      top: 1020px;
+    }
     #video-bg-475{
       display: none;
     }
@@ -1388,4 +1683,50 @@
       margin-bottom: 30px;
       padding: 0 70px;
     }
+  }
+
+
+  /* ANIMATIONS */
+
+  .asset_zoom_valentino{
+		-webkit-animation:zoom 2s ease-in-out infinite alternate;
+		animation:zoom 2s ease-in-out infinite alternate;
+		-webkit-transform:scale(0.99);
+		-ms-transform:scale(0.99);
+		transform:scale(0.99);}
+
+
+	@-webkit-keyframes zoom{
+
+		to{-webkit-transform:scale(1); transform:scale(1);}
+
+	}
+
+	@keyframes zoom{
+
+		to{-webkit-transform:scale(1); transform:scale(1);}
+
+	}
+
+  .asset_fadeout_valentino{
+		animation:fadeout 2s ease-in-out 1;
+    opacity: 0;
+  }
+  @keyframes fadeout {
+    0%{opacity: 1;}
+    90%{opacity: 0.9;}
+    100%{opacity: 0;}
+  }
+
+  .asset_fadein_valentino{
+		animation:fadein 2s ease-in 1;
+    animation-delay: 0;
+    opacity: 1;
+  }
+  @keyframes fadein {
+    0%{opacity: 0;}
+    50%{opacity: 0;}
+    85%{opacity: 0;}
+    90%{opacity: 0.9;}
+    100%{opacity: 1;}
   }
